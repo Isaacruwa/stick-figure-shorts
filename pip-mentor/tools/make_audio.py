@@ -7,7 +7,7 @@ import re, argparse, asyncio, json, os, shutil, subprocess, sys, tempfile
 import edge_tts
 
 ap = argparse.ArgumentParser()
-ap.add_argument("slug"); ap.add_argument("--voice", default="en-US-GuyNeural"); ap.add_argument("--rate", default="+4%"); ap.add_argument("--gap", type=float, default=0.3)
+ap.add_argument("slug"); ap.add_argument("--voice", default="en-US-GuyNeural"); ap.add_argument("--rate", default="+4%"); ap.add_argument("--gap", type=float, default=0.3); ap.add_argument("--lead", default="15")
 a = ap.parse_args()
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 proj = f"{root}/src/projects/{a.slug}"; pub = f"{root}/public/projects/{a.slug}"; os.makedirs(pub, exist_ok=True)
@@ -36,7 +36,7 @@ res = []
 for s in segs:
     res.append({"s": round(s.start, 2), "e": round(s.end, 2), "t": s.text, "words": [{"w": w.word, "s": round(w.start, 2), "e": round(w.end, 2)} for w in (s.words or [])]})
 json.dump(res, open(f"{proj}/transcript.json", "w"), indent=1)
-subprocess.run([sys.executable, f"{root}/../scripts/cues.py", f"{proj}/transcript.json", f"{proj}/words.ts", "--lead", "15", "--max", "4"], check=True)
+subprocess.run([sys.executable, f"{root}/../scripts/cues.py", f"{proj}/transcript.json", f"{proj}/words.ts", "--lead", a.lead, "--max", "4"], check=True)
 
 # whisper writes "forex" as "4x" and spells numbers as digits: put the script spelling back
 w = open(f"{proj}/words.ts").read()
