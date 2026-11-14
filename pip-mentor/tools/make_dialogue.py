@@ -11,7 +11,11 @@ proj = f"{root}/src/projects/{a.slug}"; pub = f"{root}/public/projects/{a.slug}"
 FF = shutil.which("ffmpeg")
 if not FF:
     import imageio_ffmpeg; FF = imageio_ffmpeg.get_ffmpeg_exe()
-VOICES = {"PIPI": ("en-US-AndrewNeural", "+10%", "+10Hz"), "GURU": ("en-US-ChristopherNeural", "+3%", "-6Hz"), "GRANDMA": ("en-GB-SoniaNeural", "-2%", "-4Hz")}
+VOICES = {
+    "PIPI": [("en-US-EricNeural", "+6%", "+10Hz"), ("en-US-BrianNeural", "+6%", "+10Hz"), ("en-US-AndrewNeural", "+6%", "+0Hz"), ("en-US-GuyNeural", "+8%", "+12Hz")],
+    "GURU": [("en-US-ChristopherNeural", "-2%", "-6Hz")],
+    "GRANDMA": [("en-GB-SoniaNeural", "-6%", "-4Hz"), ("en-US-JennyNeural", "-6%", "-4Hz")],
+}
 lines = []
 for raw in open(f"{proj}/dialogue.txt"):
     raw = raw.strip()
@@ -23,17 +27,16 @@ for raw in open(f"{proj}/dialogue.txt"):
     lines.append((who.upper(), text, pause))
 tmp = tempfile.mkdtemp()
 async def go():
+    used = {}
     for i, (who, text, _) in enumerate(lines):
-        v, r, p = VOICES.get(who, VOICES["GURU"])
-        ok = False
-        for attempt in range(4):
-            for pitch in ([p] if attempt < 2 else ["+0Hz"]):
-                try:
-                    await edge_tts.Communicate(text, v, rate=r, pitch=pitch).save(f"{tmp}/l{i}.mp3"); ok = True; break
-                except Exception as e:
-                    print("retry", who, i, attempt, str(e)[:60]); await asyncio.sleep(1.5)
-            if ok: break
-        if not ok: raise SystemExit(f"voice failed for line {i} ({who}); not swapping voices mid-film")
+        done = False
+        for v, r, p in VOICES.get(who, VOICES["GURU"]):
+            try:
+                await edge_tts.Communicate(text, v, rate=r, pitch=p).save(f"{tmp}/l{i}.mp3"); used[who] = v; done = True; break
+            except Exception as e:
+                print("voice failed:", who, v)
+        if not done: raise RuntimeError("no voice worked for " + who)
+    print("voices used:", used)
 asyncio.run(go())
 SR = 48000; pcm = b""; out = []; t = 0.0
 for i, (who, text, pause) in enumerate(lines):
