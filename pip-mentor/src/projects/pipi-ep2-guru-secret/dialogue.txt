@@ -1,0 +1,15 @@
+# WHO|text|(pause=seconds)
+GURU|I made ten thousand dollars before breakfast!
+PIPI|Teach me! Please! I have nine dollars!
+GURU|Nine? Perfect. That's the price of the secret.
+PIPI|Take it! Take it all!
+GURU|The secret is simple. Take other people's money.
+PIPI|Wait. That's... my money?
+GURU|Next lesson costs ninety.
+GRANDMA|Give. Him. Back. His nine dollars.
+GURU|Ma'am, I'm a certified wealth mentor.
+GRANDMA|I'm certified in spoons.|pause=0.5
+GURU|Yes ma'am.|pause=1.0
+PIPI|Grandma! You're the real guru!
+GRANDMA|Dinner's at six. Wash your hands.
+PIPI|Episode two. I'm still broke, but I have a grandma.
