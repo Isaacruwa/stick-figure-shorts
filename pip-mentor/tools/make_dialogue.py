@@ -4,14 +4,14 @@ Reads src/projects/<slug>/dialogue.txt (WHO|text|pause=seconds). Writes public/p
 """
 import argparse, asyncio, json, os, shutil, subprocess, tempfile, wave
 import edge_tts
-ap = argparse.ArgumentParser(); ap.add_argument("slug"); ap.add_argument("--gap", type=float, default=0.28); ap.add_argument("--lead", type=int, default=4)
+ap = argparse.ArgumentParser(); ap.add_argument("slug"); ap.add_argument("--gap", type=float, default=0.22); ap.add_argument("--lead", type=int, default=4)
 a = ap.parse_args()
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 proj = f"{root}/src/projects/{a.slug}"; pub = f"{root}/public/projects/{a.slug}"; os.makedirs(pub, exist_ok=True)
 FF = shutil.which("ffmpeg")
 if not FF:
     import imageio_ffmpeg; FF = imageio_ffmpeg.get_ffmpeg_exe()
-VOICES = {"PIPI": ("en-US-AndrewNeural", "+8%", "+14Hz"), "GURU": ("en-US-ChristopherNeural", "-2%", "-6Hz"), "GRANDMA": ("en-GB-SoniaNeural", "-6%", "-4Hz")}
+VOICES = {"PIPI": ("en-US-AndrewNeural", "+10%", "+10Hz"), "GURU": ("en-US-ChristopherNeural", "+3%", "-6Hz"), "GRANDMA": ("en-GB-SoniaNeural", "-2%", "-4Hz")}
 lines = []
 for raw in open(f"{proj}/dialogue.txt"):
     raw = raw.strip()
@@ -25,9 +25,15 @@ tmp = tempfile.mkdtemp()
 async def go():
     for i, (who, text, _) in enumerate(lines):
         v, r, p = VOICES.get(who, VOICES["GURU"])
-        try: await edge_tts.Communicate(text, v, rate=r, pitch=p).save(f"{tmp}/l{i}.mp3")
-        except Exception as e:
-            print("voice fallback for", who, e); await edge_tts.Communicate(text, "en-US-GuyNeural", rate=r).save(f"{tmp}/l{i}.mp3")
+        ok = False
+        for attempt in range(4):
+            for pitch in ([p] if attempt < 2 else ["+0Hz"]):
+                try:
+                    await edge_tts.Communicate(text, v, rate=r, pitch=pitch).save(f"{tmp}/l{i}.mp3"); ok = True; break
+                except Exception as e:
+                    print("retry", who, i, attempt, str(e)[:60]); await asyncio.sleep(1.5)
+            if ok: break
+        if not ok: raise SystemExit(f"voice failed for line {i} ({who}); not swapping voices mid-film")
 asyncio.run(go())
 SR = 48000; pcm = b""; out = []; t = 0.0
 for i, (who, text, pause) in enumerate(lines):
