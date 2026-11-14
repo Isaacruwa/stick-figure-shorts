@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p out
           for fr in 60 100 180 250 300 400 480 545 620 690 760 860 980 1100 1200; do
-            npx remotion still src/projects/$SLUG/entry.tsx $SLUG-FILM out/f$fr.png --frame=$fr --scale=0.3 --log=error
+            npx remotion still src/projects/$SLUG/entry.tsx $SLUG-FILM out/f$fr.png --frame=$fr --scale=0.3 --log=error || true
           done
           ffmpeg -v error -y -pattern_type glob -i 'out/f*.png' -filter_complex "tile=5x3" -frames:v 1 out/${SLUG}_stills.jpg || true
       - name: Render
