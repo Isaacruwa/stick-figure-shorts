@@ -1,7 +1,21 @@
 ---
-name: stick-figure-shorts
-description: Makes original stick-figure story films (20–60 s, 16:9 for a YouTube channel by default, 9:16 on request) drawn entirely in code, with SVG and React in Remotion, voiced with ElevenLabs and timed word by word. The look is white round-head characters with ink outlines and stick limbs on moody one-light sets. Every idea is acted out by the characters and props; the only text is plain subtitles (no fact cards, no typography). Use whenever the user wants a stick-figure, stickman or "white head" cartoon story video, a faceless story or explainer video, a "you" second-person dilemma story, an animated fact story for a faceless YouTube or Instagram page, or asks to make "videos like this" from a stick-figure reference. Also use to plan a series for such a channel, or to fix the timing, subtitles or look of a film made with this skill.
+name: pip-mentor-pipi
+description: Makes and posts the pip.mentor "Pipi" forex cartoon series for @pip.mentor (YouTube PipMentor Forex Coach + Instagram Reels): 9:16 stick-figure dialogue scenes (35-55 s, no narrator, one free Microsoft voice per character) drawn entirely in code with Remotion, rendered by GitHub Actions in this repo, then posted public to YouTube Shorts and Instagram through Composio. Use for anything about Pipi, pip.mentor, the next episode, the 10-episode long compilation, posting, the cast, or fixing a film. The upstream stick-figure-shorts skill is kept below as reference.
 ---
+
+# pip.mentor edition (READ THIS FIRST)
+
+This repo is the owner's fork of `deenukhan/stick-figure-shorts`, turned into the production line for the **Pipi** forex cartoon series. Where this section and the upstream text further down disagree, **this section wins** (upstream says ElevenLabs, 16:9, narrator; we use edge-tts, 9:16, characters talking).
+
+**Start here, in order:** `pip-mentor/PLAYBOOK.md` (rules, accounts, routine, gotchas) -> `pip-mentor/EPISODES.md` (what exists, money/gag continuity, ideas) -> `pip-mentor/CHARACTERS.md` -> the newest `pip-mentor/src/projects/pipi-ep*/` folder (copy it with `pip-mentor/tools/new_episode.py`).
+
+**Standing rules in one breath:** hook in the first 2 seconds; no narrator, the characters talk; never say "Episode N" aloud (on-screen "EP N" stamp only); 9:16; post public to BOTH YouTube and Instagram right after rendering; one post per day max (ask about the schedule); no financial-advice disclaimers; one real trading lesson per episode; keep the videos; update EPISODES.md after each post; every 10 episodes combine into one long 16:9 video.
+
+**Pipeline in one breath:** write `dialogue.txt` -> `tools/make_dialogue.py <slug>` (voices + `lines.ts` timings) -> adapt `Film.tsx` (everything keyed to line indexes) -> push to GitHub (the Composio sandbox resets between calls, so push in the same call) -> Actions "Render film" with the slug (~5 min) -> post via Composio (YouTube upload through `upload_local_file` s3key; Instagram via the raw GitHub URL) -> update logs.
+
+---
+
+# Upstream skill: stick-figure-shorts (reference only)
 
 # Stick-figure shorts
 
