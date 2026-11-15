@@ -1,0 +1,15 @@
+# WHO|text|(pause=seconds)
+GURU|Hello, young man. I am definitely not the guru.
+PIPI|Hi, guru.
+GURU|Fine! But my new signals win ninety-eight percent!
+PIPI|Show me your last ten trades.
+GURU|Ten wins! Look at all that green!
+PIPI|Now show me the losses.
+GURU|The losses are... in the other group.
+GRANDMA|Which other group?
+GURU|The VIP group. Only ninety-nine dollars.
+GRANDMA|Pipi. What do we do when someone hides their losses?
+PIPI|We walk away!|pause=0.5
+GRANDMA|Good. Now take off that mustache.
+GURU|Ow!|pause=1.0
+PIPI|Episode three. No proof, no pay.
