@@ -1,5 +1,8 @@
 # stick-figure-shorts
 
+> **pip.mentor edition:** this fork produces the Pipi forex cartoon series. Start with [`SKILL.md`](SKILL.md) and [`pip-mentor/PLAYBOOK.md`](pip-mentor/PLAYBOOK.md). The text below describes the upstream skill.
+
+
 A Claude Code skill that makes **stick-figure story videos** (20–60 s, 16:9 for YouTube by default, 9:16 on request). Claude writes the story, ElevenLabs voices it, and Claude draws every frame in code with [Remotion](https://www.remotion.dev): white round-head characters with stick limbs on moody one-light sets, plus music and sound effects. Every idea is **acted out by the characters**, so there are no fact cards or typography, only plain subtitles. No AI image or video generator is involved.
 
 ![Three Doors: one frame every 1.5 s](assets/preview/three_doors_sheet.jpg)
