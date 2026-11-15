@@ -8,3 +8,5 @@ Supporting cast (reusable): **Grandma** (pink cardigan, bun, glasses, wooden spo
 
 Formats: roast, education, story, wealth, advice, jokes. Every film opens with a scroll-stopping hook in the first 2 seconds.
 Sizes: 16:9 (YouTube) and 9:16 (Reels / Shorts / TikTok). Narration: free Microsoft voice (en-US-GuyNeural).
+
+**The Devil** (red, horns, tail, pitchfork; voice en-US-RogerNeural) and **The Angel** (white robe, wings, halo; voice en-US-JennyNeural): tiny, sit on Pipi's shoulders (ep 4). **The Guru** can wear a disguise (beige trench coat, fedora, fake mustache; ep 3). Voices: Pipi en-US-EricNeural, Guru en-US-ChristopherNeural, Grandma en-GB-SoniaNeural. Characters are defined in each project's `characters.tsx`.
