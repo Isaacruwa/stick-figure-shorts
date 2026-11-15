@@ -1,0 +1,15 @@
+# WHO|text|(pause=seconds)
+DEVIL|That loss was personal. Double it! Revenge!
+PIPI|Double it?
+DEVIL|Double it! Then double it again!
+ANGEL|Pipi, no. Close the chart.
+DEVIL|The chart owes you money!
+ANGEL|The chart owes you nothing.
+PIPI|But I want my dollar back!
+ANGEL|That dollar is gone. Your other eight are not.
+DEVIL|Fear is for losers!
+PIPI|No. Closing the chart.|pause=0.4
+DEVIL|Noooo!|pause=0.5
+GRANDMA|Good boy, Pipi. Now where's that little red troublemaker?
+DEVIL|Ow!|pause=1.0
+PIPI|Episode four. Close the chart. Keep your money.
