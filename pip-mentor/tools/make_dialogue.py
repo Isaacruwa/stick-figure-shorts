@@ -13,6 +13,8 @@ if not FF:
     import imageio_ffmpeg; FF = imageio_ffmpeg.get_ffmpeg_exe()
 VOICES = {
     "PIPI": [("en-US-EricNeural", "+6%", "+10Hz"), ("en-US-BrianNeural", "+6%", "+10Hz"), ("en-US-AndrewNeural", "+6%", "+0Hz"), ("en-US-GuyNeural", "+8%", "+12Hz")],
+    "DEVIL": [("en-US-RogerNeural", "+0%", "-6Hz"), ("en-US-GuyNeural", "+4%", "-8Hz")],
+    "ANGEL": [("en-US-JennyNeural", "+4%", "+8Hz"), ("en-US-AriaNeural", "+4%", "+8Hz")],
     "GURU": [("en-US-ChristopherNeural", "-2%", "-6Hz")],
     "GRANDMA": [("en-GB-SoniaNeural", "-6%", "-4Hz"), ("en-US-JennyNeural", "-6%", "-4Hz")],
 }
