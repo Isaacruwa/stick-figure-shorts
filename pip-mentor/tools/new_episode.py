@@ -38,11 +38,11 @@ export const Film: React.FC = () => {
 '''
 for f in ["kit.tsx", "characters.tsx", "Film.tsx", "index.tsx", "entry.tsx"]:
     t = open(f"{src}/{f}").read().replace(a.src, a.slug)
-    t = re.sub(r">EP \\d+<", f">EP {a.n}<", t)
+    t = re.sub(r">EP \d+<", f">EP {a.n}<", t)
     if f == "Film.tsx" and "const Frame:" not in t:
         k = t.index("export const Film: React.FC = () => {")
         t = t[:k] + LOOP_ROOT.replace("__SLUG__", a.slug)
     open(f"{dst}/{f}", "w").write(t)
 if not os.path.exists(f"{dst}/dialogue.txt"):
-    open(f"{dst}/dialogue.txt", "w").write("# WHO|text|(pause=seconds)  WHO = PIPI, GURU, GRANDMA, DEVIL, ANGEL\\nPIPI|First line is the hook.\\n")
+    open(f"{dst}/dialogue.txt", "w").write("# WHO|text|(pause=seconds)  WHO = PIPI, GURU, GRANDMA, DEVIL, ANGEL\nPIPI|First line is the hook.\\n")
 print("scaffolded", dst)
