@@ -44,6 +44,13 @@ jobs:
         run: npx remotion render src/projects/$SLUG/entry.tsx $SLUG-FILM out/raw.mp4 --scale=0.75 --concurrency=2 --log=error
       - name: Normalise loudness
         run: ffmpeg -v error -y -i out/raw.mp4 -c:v copy -af "loudnorm=I=-16:TP=-1.5:LRA=11" -c:a aac -b:a 192k -ar 48000 out/$SLUG.mp4
+      - name: Loop check (is the last frame the same as the first frame?)
+        continue-on-error: true
+        run: |
+          ffmpeg -v error -y -i out/$SLUG.mp4 -frames:v 1 out/first.png || true
+          ffmpeg -v error -y -sseof -0.1 -i out/$SLUG.mp4 -update 1 -frames:v 1 out/last.png || true
+          ffmpeg -i out/first.png -i out/last.png -lavfi ssim -f null - 2>&1 | grep -o "All:[0-9.]*" > out/${SLUG}_loop.txt || echo "no result" > out/${SLUG}_loop.txt
+          echo "first vs last frame similarity (1.0 = identical):"; cat out/${SLUG}_loop.txt
       - name: Contact sheet
         run: ffmpeg -v error -y -i out/$SLUG.mp4 -vf "fps=1/2,scale=240:-1,tile=6x4" -frames:v 1 out/${SLUG}_sheet.jpg
       - uses: actions/upload-artifact@v4
@@ -60,6 +67,7 @@ jobs:
           cp pip-mentor/out/$SLUG.mp4 videos/${SLUG}_v${GITHUB_RUN_NUMBER}.mp4
           cp pip-mentor/out/${SLUG}_sheet.jpg videos/${SLUG}_v${GITHUB_RUN_NUMBER}_sheet.jpg
           cp pip-mentor/out/${SLUG}_stills.jpg videos/${SLUG}_v${GITHUB_RUN_NUMBER}_stills.jpg || true
+          cp pip-mentor/out/${SLUG}_loop.txt videos/${SLUG}_v${GITHUB_RUN_NUMBER}_loop.txt || true
           git config user.name "claude-renders"
           git config user.email "actions@users.noreply.github.com"
           git add videos
