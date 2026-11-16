@@ -17,6 +17,7 @@ A daily forex-flavoured cartoon series starring **Pipi** (broke trader with a mi
 9. **Keep the rendered videos** (they may be reposted to other apps later, e.g. TikTok under the same username) and **update `EPISODES.md` after every episode**.
 10. Thumbnails: skipped for now (YouTube custom thumbnails need the channel phone-verified at youtube.com/verify). A 1280x720 thumbnail was made for forex-roast-1 (`videos/forex-roast-1_thumb.jpg`).
 11. Every 10 episodes: one long 16:9 YouTube video combining them (title cards between episodes). Nothing to do until ep 10.
+12. **Perfect loop.** The very last frame must be identical to the very first frame (the hook image), so Shorts/Reels replay seamlessly and watch time climbs. The hook in the first 2 seconds stays; the end dissolves back into frame 0. `tools/new_episode.py` builds this in (`Frame` component: the last 14 frames cross-fade `<Frame f={0}/>` over the timeline, audio is unaffected). Keep frame 0 a clean, striking image (flash + close-up) and keep the closing line + EP stamp before the final 14 frames. Applies from ep 5 on; eps 1-4 were posted without it and are not being redone.
 
 ## 3. Accounts and connections (Composio, session id "safe" in meta calls)
 - GitHub: account `github_chord-jeerer` (user Isaacruwa). Repo `Isaacruwa/stick-figure-shorts` (fork of deenukhan/stick-figure-shorts, public).
@@ -51,6 +52,7 @@ A daily forex-flavoured cartoon series starring **Pipi** (broke trader with a mi
 - Camera = `mk(from, to, camStart, camEnd, shakes)`: `translate(VW/2, VH/2) scale(z) translate(-cx, -cy)`; cam = [cx, cy, z]. Close-up ~[x, 1580, 1.9]; wide ~[760, 1700, 1.15]; shoulder characters ~z 4.4. Backgrounds must extend past the world edges (x -800..2240, y -1200..3600) because close-ups can show outside 0..1440.
 - One shot per spoken line starting 3 frames before the line; `PLAN[i].split` cuts to a second shot (reaction or wide) part-way. Hook shot 0 gets a flash + shake.
 - Subtitles are a `div` at top 1690 (inside the Reels safe zone), 92 px uppercase, coloured per speaker, 4-word chunks timed by character count. No karaoke captions.
+- **Loop tail:** the Film root renders `<Frame f={f}/>` and, over the last 14 frames, fades `<Frame f={0}/>` on top, so frame N-1 equals frame 0. Copy the root from `tools/new_episode.py` (LOOP_ROOT) if scaffolding by hand.
 - Sound: `Soundtrack` plays `narration.mp3` at `voiceAt = LEAD`, `music_pad`, `amb_night` and an `SFX` list of `[frame, name, volume]` (names: sfx_pop, click, coin, ding, sad, whoosh, buzz, thump, thud, tap, sparkle). Library is synthesised by `make_sfx.sh`.
 - Staging reminders: figure arm length 120*s; a hand at armR=a is at x = X + (40 + sin(a)*120)*s (mirrored for facing -1), y = GROUND + (-272 + cos(a)*120)*s. Face geometry (figure-local): eyes y=-350, mouth y=-320, head top -414. Overlays (hats, mustache, horns, halo) are drawn in figure-local coordinates in `characters.tsx`.
 
