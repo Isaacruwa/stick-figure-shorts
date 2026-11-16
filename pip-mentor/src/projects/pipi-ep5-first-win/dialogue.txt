@@ -1,0 +1,12 @@
+# WHO|text|(pause=seconds)
+PIPI|I won! I actually WON!
+GRANDMA|How much, sweetheart?
+PIPI|Two whole dollars!|pause=0.35
+DEVIL|Two dollars? Pfft. Go bigger!
+ANGEL|He followed his plan. That's the real win.
+PIPI|Stop loss. Take profit. Done.
+GRANDMA|Plan, patience, profit. Same as my soup.
+DEVIL|Boring!|pause=0.3
+GRANDMA|Open wide.|pause=0.8
+DEVIL|...Okay. That's good soup.
+PIPI|Small wins. Same plan. Every day.
