@@ -8,9 +8,9 @@ Each episode = **relatable trader pain** + **a character collision** + **three e
 ## Who is funny and how
 | Character | Comedy job | Signature |
 |---|---|---|
-| **Grandma** | Savage roast queen. Dry, loving, lethal. Roasts the devil, the guru, even Pipi. Backs up the angel. | Specific, creative insults; "Sit down."; the spoon as a punchline weapon |
+| **Grandma** | **Savage roast queen who speed-talks and yaps** (voice +24% speed, long rapid-fire runs of insults). Roasts EVERYONE: the devil, the guru, every new character, even Pipi. Backs up the angel. Long arc: she and Pipi end up rich together, so she stays savage all the way up. | Specific, creative insults; "Sit down."; the spoon as a punchline weapon |
 | **Angel** | Sweet-voiced assassin. Polite on the surface, brutal underneath. Sometimes teams up with Grandma. | "Bless his heart."; "I have the paperwork." |
-| **Devil** | Loud, dramatic, fragile ego, terrible advice (FOMO, revenge, all-in). Gets owned every time and comes back anyway. | "I RESIGNED!"; the heaven insecurity; carried out by the horns |
+| **Devil** | Loud, dramatic, fragile ego, terrible advice (FOMO, revenge, all-in). Gets owned every time and comes back anyway. **He can cry (tears), faint (dizzy stars) and get carried out.** | "I RESIGNED!"; the heaven insecurity; carried out by the horns |
 | **Guru** | Fake rich, caught lying, always renting something. | rented Lambo, rented jet, fake mustache |
 | **Pipi** | The straight man with a deadpan streak. Earnest, sometimes the funniest line is his one-word reaction. | "...Okay." |
 
@@ -46,3 +46,10 @@ Write 3 versions of every key line, keep the funniest, read it aloud for timing,
 - Angel: "Bless his heart." / "I have the paperwork." / "Heaven has a file on you."
 - Pipi deadpan: "...Okay." / "I love you, Grandma, and that was brutal."
 - Guru: renting everything (Lambo, jet, dog), fake accents, disguises.
+
+## Delivery rules (added 2026-11-17 from the owner's feedback)
+- Grandma yaps: fast, long insult runs, gestures with the free hand. More roasts per episode; no one is safe (guru, Pipi, new characters).
+- Devil and Angel are physical: crying (`cry` prop on Devil), fainting (rotate + dizzy stars), being carried out (Angel flies off with him).
+- **Sounds spoken as sounds, not letters:** write "Mm-hm." or "Hmmm." in the dialogue. Do not write MMHM in capitals (the voice would spell it). Checked: "Mm-hm." gives a ~0.4 s hum, not spelled letters.
+- Delivery speeds: Grandma +24%, Pipi +14%, Angel +12%, Devil +8%, gap 0.2 s. Use `pause=0.5` after a punchline for the reaction beat. Roast sound effects: `sfx_burn`, `sfx_rimshot`, `sfx_faint`, `sfx_boing`.
+- Target length 35-45 s (ep 6 ran 56 s: cut lines before cutting jokes).
