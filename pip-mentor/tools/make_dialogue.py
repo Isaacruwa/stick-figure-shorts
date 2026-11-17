@@ -1,52 +1,55 @@
 """Cartoon dialogue audio for a pip.mentor film: one free Microsoft voice per character (edge-tts), exact line timings.
 usage: python3 tools/make_dialogue.py <slug> [--gap 0.28] [--lead 4]
-Reads src/projects/<slug>/dialogue.txt (WHO|text|pause=seconds). Writes public/projects/<slug>/narration.mp3 and src/projects/<slug>/lines.ts
+Reads src/projects/<slug>/dialogue.txt: WHO|text|pause=0.4|rate=+10%|pitch=+5Hz  (options optional). Writes public/projects/<slug>/narration.mp3 and src/projects/<slug>/lines.ts
+Sounds like "mm-hm" or "hmm": just write them as words ("Mm-hm.", "Hmmm."), the voice makes the real sound (do NOT use capitals like MMHM, that gets spelled out).
 """
 import argparse, asyncio, json, os, shutil, subprocess, tempfile, wave
 import edge_tts
-ap = argparse.ArgumentParser(); ap.add_argument("slug"); ap.add_argument("--gap", type=float, default=0.22); ap.add_argument("--lead", type=int, default=4)
+ap = argparse.ArgumentParser(); ap.add_argument("slug"); ap.add_argument("--gap", type=float, default=0.28); ap.add_argument("--lead", type=int, default=4)
 a = ap.parse_args()
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 proj = f"{root}/src/projects/{a.slug}"; pub = f"{root}/public/projects/{a.slug}"; os.makedirs(pub, exist_ok=True)
 FF = shutil.which("ffmpeg")
 if not FF:
     import imageio_ffmpeg; FF = imageio_ffmpeg.get_ffmpeg_exe()
+# (voice, rate, pitch). Grandma speed-talks (+24%): she yaps. Add new characters here.
 VOICES = {
     "PIPI": [("en-US-EricNeural", "+6%", "+10Hz"), ("en-US-BrianNeural", "+6%", "+10Hz"), ("en-US-AndrewNeural", "+6%", "+0Hz"), ("en-US-GuyNeural", "+8%", "+12Hz")],
     "DEVIL": [("en-US-RogerNeural", "+0%", "-6Hz"), ("en-US-GuyNeural", "+4%", "-8Hz")],
     "ANGEL": [("en-US-JennyNeural", "+4%", "+8Hz"), ("en-US-AriaNeural", "+4%", "+8Hz")],
     "GURU": [("en-US-ChristopherNeural", "-2%", "-6Hz")],
-    "GRANDMA": [("en-GB-SoniaNeural", "-6%", "-4Hz"), ("en-US-JennyNeural", "-6%", "-4Hz")],
+    "GRANDMA": [("en-GB-SoniaNeural", "+24%", "-4Hz"), ("en-US-JennyNeural", "+24%", "-4Hz")],
 }
 lines = []
 for raw in open(f"{proj}/dialogue.txt"):
     raw = raw.strip()
     if not raw or raw.startswith("#"): continue
     who, text, *rest = [p.strip() for p in raw.split("|")]
-    pause = a.gap
+    opt = {"pause": a.gap}
     for r in rest:
-        if r.startswith("pause="): pause = float(r[6:])
-    lines.append((who.upper(), text, pause))
+        k, _, v = r.partition("=")
+        opt[k.strip()] = float(v) if k.strip() == "pause" else v.strip()
+    lines.append((who.upper(), text, opt))
 tmp = tempfile.mkdtemp()
 async def go():
     used = {}
-    for i, (who, text, _) in enumerate(lines):
+    for i, (who, text, opt) in enumerate(lines):
         done = False
         for v, r, p in VOICES.get(who, VOICES["GURU"]):
             try:
-                await edge_tts.Communicate(text, v, rate=r, pitch=p).save(f"{tmp}/l{i}.mp3"); used[who] = v; done = True; break
+                await edge_tts.Communicate(text, v, rate=opt.get("rate", r), pitch=opt.get("pitch", p)).save(f"{tmp}/l{i}.mp3"); used[who] = v; done = True; break
             except Exception as e:
                 print("voice failed:", who, v)
         if not done: raise RuntimeError("no voice worked for " + who)
     print("voices used:", used)
 asyncio.run(go())
 SR = 48000; pcm = b""; out = []; t = 0.0
-for i, (who, text, pause) in enumerate(lines):
+for i, (who, text, opt) in enumerate(lines):
     subprocess.run([FF, "-v", "error", "-y", "-i", f"{tmp}/l{i}.mp3", "-ac", "1", "-ar", str(SR), f"{tmp}/l{i}.wav"], check=True)
     with wave.open(f"{tmp}/l{i}.wav") as w: n = w.getnframes(); frames = w.readframes(n)
     dur = n / SR
     out.append({"who": who, "text": text, "start": round(t * 30) + a.lead, "end": round((t + dur) * 30) + a.lead})
-    pcm += frames + b"\x00\x00" * int(SR * pause); t += dur + pause
+    pcm += frames + b"\x00\x00" * int(SR * opt["pause"]); t += dur + opt["pause"]
 with wave.open(f"{tmp}/all.wav", "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm)
 subprocess.run([FF, "-v", "error", "-y", "-i", f"{tmp}/all.wav", "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-b:a", "128k", f"{pub}/narration.mp3"], check=True)
 body = ",\n".join("  " + json.dumps(o) for o in out)
