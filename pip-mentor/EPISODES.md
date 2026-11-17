@@ -11,7 +11,7 @@ Keep this file updated after every post. The videos themselves can be deleted: t
 - Ep 1 and the roast used a narrator (en-US-GuyNeural). From ep 2 on: no narrator, the characters talk.
 
 ## Running gags / continuity
-- Pipi's money: starts with $10 (ep 1), risks $1, loses it, has $9, wins $3, buys grandma a tea -> back to $9. Ep 2 and 3 start with "nine dollars". Ep 4: he loses another $1 -> $8.
+- Pipi's money: starts with $10 (ep 1), risks $1, loses it, has $9, wins $3, buys grandma a tea -> back to $9. Ep 2 and 3 start with "nine dollars". Ep 4: he loses another $1 -> $8. Ep 5: wins $2 -> $10.
 - Moth flying out of his empty pocket (ep 1). Grandma's spoon. The guru's rented Lamborghini. Every ep ends on "Episode N ..." plus a stamp.
 - Teaching beats: never bet the rent / risk 1% (ep 1), gurus sell courses not profits (ep 2), no proof, no pay: ask for the losses (ep 3).
 
@@ -23,6 +23,7 @@ Keep this file updated after every post. The videos themselves can be deleted: t
 | 2 | The Guru's Secret | pipi-ep2-guru-secret | 9:16, dialogue | CfB-9QiKios | media 17969380461207982 | Guru brags $10k before breakfast. Pipi pays $9 for "the secret": take other people's money. Next lesson $90. Grandma ("certified in spoons") makes him return the money; guru flees. |
 | 3 | No Proof, No Pay | pipi-ep3-no-proof | 9:16, dialogue | jYqWldb0zIs | media 18111352430628423 | Guru in a disguise sells "98% win" signals. Pipi asks for the losses: "in the other group" ($99 VIP). Grandma yanks off the fake mustache; guru flees. |
 | 4 | The Revenge Trade | pipi-ep4-revenge-trade | 9:16, dialogue | t4QJcWbah1g | media 18033420338883096 | After losing $1 (Pipi now has $8), the devil on his shoulder says double it (revenge); the angel says close the chart. Pipi closes it. Grandma finds the devil and whacks him off-screen with her spoon. |
+| 5 | First Real Win | pipi-ep5-first-win | 9:16, dialogue, perfect loop | SZ8EAk_o90g | media 17968521003220738 | Pipi wins $2 by following a plan (now $10). Devil: go bigger. Angel: the plan is the win. Grandma feeds the devil her soup and he converts (heart). Posted Tue 2026-11-17. |
 
 Both ep 2 and ep 3 passed 1k views on YouTube within a day or two.
 
