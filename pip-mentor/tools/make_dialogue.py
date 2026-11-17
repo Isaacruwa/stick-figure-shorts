@@ -5,7 +5,7 @@ Sounds like "mm-hm" or "hmm": just write them as words ("Mm-hm.", "Hmmm."), the 
 """
 import argparse, asyncio, json, os, shutil, subprocess, tempfile, wave
 import edge_tts
-ap = argparse.ArgumentParser(); ap.add_argument("slug"); ap.add_argument("--gap", type=float, default=0.28); ap.add_argument("--lead", type=int, default=4)
+ap = argparse.ArgumentParser(); ap.add_argument("slug"); ap.add_argument("--gap", type=float, default=0.2); ap.add_argument("--lead", type=int, default=4)
 a = ap.parse_args()
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 proj = f"{root}/src/projects/{a.slug}"; pub = f"{root}/public/projects/{a.slug}"; os.makedirs(pub, exist_ok=True)
@@ -14,9 +14,9 @@ if not FF:
     import imageio_ffmpeg; FF = imageio_ffmpeg.get_ffmpeg_exe()
 # (voice, rate, pitch). Grandma speed-talks (+24%): she yaps. Add new characters here.
 VOICES = {
-    "PIPI": [("en-US-EricNeural", "+6%", "+10Hz"), ("en-US-BrianNeural", "+6%", "+10Hz"), ("en-US-AndrewNeural", "+6%", "+0Hz"), ("en-US-GuyNeural", "+8%", "+12Hz")],
-    "DEVIL": [("en-US-RogerNeural", "+0%", "-6Hz"), ("en-US-GuyNeural", "+4%", "-8Hz")],
-    "ANGEL": [("en-US-JennyNeural", "+4%", "+8Hz"), ("en-US-AriaNeural", "+4%", "+8Hz")],
+    "PIPI": [("en-US-EricNeural", "+14%", "+10Hz"), ("en-US-BrianNeural", "+14%", "+10Hz"), ("en-US-AndrewNeural", "+6%", "+0Hz"), ("en-US-GuyNeural", "+8%", "+12Hz")],
+    "DEVIL": [("en-US-RogerNeural", "+8%", "-6Hz"), ("en-US-GuyNeural", "+4%", "-8Hz")],
+    "ANGEL": [("en-US-JennyNeural", "+12%", "+8Hz"), ("en-US-AriaNeural", "+12%", "+8Hz")],
     "GURU": [("en-US-ChristopherNeural", "-2%", "-6Hz")],
     "GRANDMA": [("en-GB-SoniaNeural", "+24%", "-4Hz"), ("en-US-JennyNeural", "+24%", "-4Hz")],
 }
