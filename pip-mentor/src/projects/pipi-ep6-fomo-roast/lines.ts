@@ -2,18 +2,18 @@
 export const LEAD = 4;
 export const LINES: { who: string; text: string; start: number; end: number }[] = [
   {"who": "GRANDMA", "text": "Don't listen to that stupid red thing. He couldn't even stay in heaven.", "start": 4, "end": 121},
-  {"who": "DEVIL", "text": "I RESIGNED!", "start": 129, "end": 185},
-  {"who": "ANGEL", "text": "Mm-hm. Security carried you out by the horns.", "start": 194, "end": 322},
-  {"who": "PIPI", "text": "Guys. This coin is up four hundred percent. Should I buy?", "start": 331, "end": 507},
-  {"who": "DEVIL", "text": "BUY! Everyone's getting rich without you!", "start": 515, "end": 627},
-  {"who": "GRANDMA", "text": "Sweetie, the bus already left. You'd be buying the bus stop.", "start": 636, "end": 752},
-  {"who": "PIPI", "text": "Wait. If I buy now... I'm the one they sell to?", "start": 760, "end": 914},
-  {"who": "ANGEL", "text": "Look at him. Learning. It's beautiful.", "start": 922, "end": 1065},
-  {"who": "DEVIL", "text": "I'm the DEVIL! I run hell!", "start": 1073, "end": 1176},
-  {"who": "GRANDMA", "text": "Baby, you couldn't even qualify for Earth. That's why they sent you down.", "start": 1185, "end": 1312},
-  {"who": "DEVIL", "text": "...That's not how it works.", "start": 1327, "end": 1399},
-  {"who": "ANGEL", "text": "It's exactly how it works. I have the paperwork.", "start": 1408, "end": 1540},
-  {"who": "DEVIL", "text": "I RESIGNED!", "start": 1558, "end": 1614},
-  {"who": "PIPI", "text": "If you're late, you're their exit.", "start": 1623, "end": 1701},
+  {"who": "DEVIL", "text": "I RESIGNED!", "start": 127, "end": 183},
+  {"who": "ANGEL", "text": "Mm-hm. Security carried you out by the horns.", "start": 189, "end": 308},
+  {"who": "PIPI", "text": "Guys. This coin is up four hundred percent. Should I buy?", "start": 314, "end": 478},
+  {"who": "DEVIL", "text": "BUY! Everyone's getting rich without you!", "start": 484, "end": 587},
+  {"who": "GRANDMA", "text": "Sweetie, the bus already left. You'd be buying the bus stop.", "start": 593, "end": 709},
+  {"who": "PIPI", "text": "Wait. If I buy now... I'm the one they sell to?", "start": 715, "end": 858},
+  {"who": "ANGEL", "text": "Look at him. Learning. It's beautiful.", "start": 864, "end": 996},
+  {"who": "DEVIL", "text": "I'm the DEVIL! I run hell!", "start": 1002, "end": 1098},
+  {"who": "GRANDMA", "text": "Baby, you couldn't even qualify for Earth. That's why they sent you down.", "start": 1104, "end": 1231},
+  {"who": "DEVIL", "text": "...That's not how it works.", "start": 1246, "end": 1314},
+  {"who": "ANGEL", "text": "It's exactly how it works. I have the paperwork.", "start": 1320, "end": 1443},
+  {"who": "DEVIL", "text": "I RESIGNED!", "start": 1461, "end": 1517},
+  {"who": "PIPI", "text": "If you're late, you're their exit.", "start": 1523, "end": 1596},
 ];
-export const VOICE_END = 1701;
+export const VOICE_END = 1596;
