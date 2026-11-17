@@ -64,4 +64,4 @@ See `CHARACTERS.md`. Voices: Pipi en-US-EricNeural (+6%, +10Hz), Guru en-US-Chri
 - Instagram: same hook, the lesson, a question, "Follow @pip.mentor for the next one", hashtags. `share_to_feed: true`.
 
 ## 10. Status (update me)
-Episodes 1-4 posted (YouTube + Instagram; forex-roast-1 YouTube only). Ep 2 and 3 passed 1k views on YouTube. Next: ep 5 on Tue 2026-11-17 (idea: Pipi's first real win, or the guru's fake funded-account challenge). Pipi's money is $8 after ep 4. Open: thumbnail needs channel verification; TikTok not set up; compilation at ep 10.
+Episodes 1-5 posted (YouTube + Instagram; forex-roast-1 YouTube only). Ep 2 and 3 passed 1k views on YouTube. Ep 5 (posted Tue 2026-11-17) is the first with the perfect loop (first vs last frame PSNR 53 dB). Pipi's money: $10 after ep 5. Next: ep 6 on Wed 2026-11-18 if the owner asks (ideas in EPISODES.md; fake funded-account challenge by the guru, or others). Open: thumbnail needs channel verification; TikTok not set up; compilation at ep 10.
