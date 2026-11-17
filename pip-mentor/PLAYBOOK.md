@@ -19,6 +19,8 @@ A daily forex-flavoured cartoon series starring **Pipi** (broke trader with a mi
 11. Every 10 episodes: one long 16:9 YouTube video combining them (title cards between episodes). Nothing to do until ep 10.
 12. **Perfect loop.** The very last frame must be identical to the very first frame (the hook image), so Shorts/Reels replay seamlessly and watch time climbs. The hook in the first 2 seconds stays; the end dissolves back into frame 0. `tools/new_episode.py` builds this in (`Frame` component: the last 14 frames cross-fade `<Frame f={0}/>` over the timeline, audio is unaffected). Keep frame 0 a clean, striking image (flash + close-up) and keep the closing line + EP stamp before the final 14 frames. The render workflow now MEASURES it: `videos/<slug>_v<N>_loop.txt` holds the first-vs-last-frame PSNR (`average:53` or `inf` = identical; below ~40 dB means the loop is broken: fix before posting and tell the owner). Ep 5 measured 53 dB (verified by hand). Applies from ep 5 on; eps 1-4 were posted without it and are not being redone.
 
+13. **Be actually funny.** Read `WRITING.md` before writing any script: roast-comedy cast (Grandma savage, Angel sweet-assassin, Devil fragile ego), three escalating jokes, a physical payoff, a quotable button line, and the share test. Owner feedback (2026-11-17): eps 1-5 were nice to look at but not funny enough; every new script must earn rewatches and shares.
+
 ## 3. Accounts and connections (Composio, session id "safe" in meta calls)
 - GitHub: account `github_chord-jeerer` (user Isaacruwa). Repo `Isaacruwa/stick-figure-shorts` (fork of deenukhan/stick-figure-shorts, public).
 - YouTube: account `youtube_ole-chance`, channel **PipMentor Forex Coach** (channel id UCJAFsCpvDnYKnT04KA_teVg).
