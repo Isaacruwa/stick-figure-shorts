@@ -1,0 +1,15 @@
+# WHO|text|options (pause= rate= pitch=)
+GRANDMA|Don't listen to that stupid red thing. He couldn't even stay in heaven.
+DEVIL|I RESIGNED!
+ANGEL|Mm-hm. Security carried you out by the horns.
+PIPI|Guys. This coin is up four hundred percent. Should I buy?
+DEVIL|BUY! Everyone's getting rich without you!
+GRANDMA|Sweetie, the bus already left. You'd be buying the bus stop.
+PIPI|Wait. If I buy now... I'm the one they sell to?
+ANGEL|Look at him. Learning. It's beautiful.
+DEVIL|I'm the DEVIL! I run hell!
+GRANDMA|Baby, you couldn't even qualify for Earth. That's why they sent you down.|pause=0.5
+DEVIL|...That's not how it works.
+ANGEL|It's exactly how it works. I have the paperwork.|pause=0.6
+DEVIL|I RESIGNED!
+PIPI|If you're late, you're their exit.
