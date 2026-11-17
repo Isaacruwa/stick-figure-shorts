@@ -11,6 +11,8 @@ This repo is the owner's fork of `deenukhan/stick-figure-shorts`, turned into th
 
 **Standing rules in one breath:** hook in the first 2 seconds; no narrator, the characters talk; never say "Episode N" aloud (on-screen "EP N" stamp only); 9:16; post public to BOTH YouTube and Instagram right after rendering; one post per day max (ask about the schedule); no financial-advice disclaimers; one real trading lesson per episode; **perfect loop: the last frame equals the first frame (the ending dissolves back into frame 0; built into tools/new_episode.py)**; keep the videos; update EPISODES.md after each post; every 10 episodes combine into one long 16:9 video.
 
+**Comedy (non-negotiable):** read `pip-mentor/WRITING.md` before writing any script; scripts must pass its share test (quotable line, tag-a-friend relatable, a laugh every ~4 s, a mute-friendly visual gag, rewatch hooks).
+
 **Pipeline in one breath:** write `dialogue.txt` -> `tools/make_dialogue.py <slug>` (voices + `lines.ts` timings) -> adapt `Film.tsx` (everything keyed to line indexes) -> push to GitHub (the Composio sandbox resets between calls, so push in the same call) -> Actions "Render film" with the slug (~5 min) -> post via Composio (YouTube upload through `upload_local_file` s3key; Instagram via the raw GitHub URL) -> update logs.
 
 ---
