@@ -1,0 +1,14 @@
+# WHO|text|options (pause= rate= pitch=)
+GURU|Pay me five hundred dollars and I'll give you a hundred-thousand-dollar account!
+GRANDMA|Sir. That's not an account. That's a ransom note.
+GURU|It's a challenge! You pass, you get funded!
+PIPI|I have ten dollars. And if I fail?
+GURU|You try again! Five hundred more!
+GRANDMA|So the fee is the business and the account is the bait? You're not a mentor, baby, you're a fishing hook with a ring light.
+DEVIL|Honestly? I'm in. Better benefits than hell.
+ANGEL|You switched shoulders?
+DEVIL|He pays in cash. Rented cash, but still.|pause=0.4
+GRANDMA|Rented cash! Rented Lambo! Rented mustache! Is anything in your life yours?|pause=0.35
+GURU|...My confidence.
+GRANDMA|Rented. I can see the return date on your forehead.|pause=0.7
+PIPI|If they win when you fail, that's not a mentor.
