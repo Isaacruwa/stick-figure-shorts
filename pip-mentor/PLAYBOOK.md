@@ -66,5 +66,4 @@ See `CHARACTERS.md`. Voices: Pipi en-US-EricNeural (+6%, +10Hz), Guru en-US-Chri
 - Instagram: same hook, the lesson, a question, "Follow @pip.mentor for the next one", hashtags. `share_to_feed: true`.
 
 ## 10. Status (update me)
-(2026-11-17: ep 6 built and verified, NOT posted; post Wed 2026-11-18 when the owner says so. The loop check in the workflow now works, reads e.g. average:53.09.)
-Episodes 1-5 posted (YouTube + Instagram; forex-roast-1 YouTube only). Ep 2 and 3 passed 1k views on YouTube. Ep 5 (posted Tue 2026-11-17) is the first with the perfect loop (first vs last frame PSNR 53 dB). Pipi's money: $10 after ep 5. Next: ep 6 on Wed 2026-11-18 if the owner asks (ideas in EPISODES.md; fake funded-account challenge by the guru, or others). Open: thumbnail needs channel verification; TikTok not set up; compilation at ep 10.
+Episodes 1-6 posted (YouTube + Instagram; forex-roast-1 YouTube only). Ep 5 (loop) and ep 6 (roast comedy, posted Wed 2026-11-18) are the first with the perfect loop; the workflow loop check works (reads e.g. average:53.09). Pipi's money: $10. Next: ep 7 on Thu 2026-11-19 when the owner asks; follow WRITING.md (savage speed-talking Grandma roasting everyone, devil cries/faints, 35-45 s, share test). Open: thumbnail needs channel verification; TikTok not set up; compilation at ep 10.
