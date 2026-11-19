@@ -66,5 +66,6 @@ See `CHARACTERS.md`. Voices: Pipi en-US-EricNeural (+6%, +10Hz), Guru en-US-Chri
 - Instagram: same hook, the lesson, a question, "Follow @pip.mentor for the next one", hashtags. `share_to_feed: true`.
 
 ## 10. Status (update me)
+(2026-11-19: ep 7 is on Instagram; YouTube upload returned 429 'Video Uploads per day' (a daily quota on the shared Composio Google project, resets 08:00 UTC = 11:00 Nairobi). Retry the YouTube upload after that: re-stage the mp4 with upload_local_file, title 'Grandma called the guru's course a RANSOM NOTE #Shorts'. If a 429 happens again: post to Instagram first, retry YouTube later, tell the owner.)
 (2026-11-18: ep 7 built and verified, NOT posted; post Thu 2026-11-19 when the owner says so.)
 Episodes 1-6 posted (YouTube + Instagram; forex-roast-1 YouTube only). Ep 5 (loop) and ep 6 (roast comedy, posted Wed 2026-11-18) are the first with the perfect loop; the workflow loop check works (reads e.g. average:53.09). Pipi's money: $10. Next: ep 7 on Thu 2026-11-19 when the owner asks; follow WRITING.md (savage speed-talking Grandma roasting everyone, devil cries/faints, 35-45 s, share test). Open: thumbnail needs channel verification; TikTok not set up; compilation at ep 10.
