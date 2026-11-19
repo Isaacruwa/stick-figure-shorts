@@ -17,6 +17,7 @@ VOICES = {
     "PIPI": [("en-US-EricNeural", "+14%", "+10Hz"), ("en-US-BrianNeural", "+14%", "+10Hz"), ("en-US-AndrewNeural", "+6%", "+0Hz"), ("en-US-GuyNeural", "+8%", "+12Hz")],
     "DEVIL": [("en-US-RogerNeural", "+8%", "-6Hz"), ("en-US-GuyNeural", "+4%", "-8Hz")],
     "ANGEL": [("en-US-JennyNeural", "+12%", "+8Hz"), ("en-US-AriaNeural", "+12%", "+8Hz")],
+    "BROKER": [("en-US-GuyNeural", "+10%", "+6Hz"), ("en-US-BrianNeural", "+10%", "+4Hz")],
     "GURU": [("en-US-ChristopherNeural", "-2%", "-6Hz")],
     "GRANDMA": [("en-GB-SoniaNeural", "+24%", "-4Hz"), ("en-US-JennyNeural", "+24%", "-4Hz")],
 }
