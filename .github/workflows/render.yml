@@ -41,7 +41,7 @@ jobs:
           done
           ffmpeg -v error -y -pattern_type glob -i 'out/f*.png' -filter_complex "tile=5x3" -frames:v 1 out/${SLUG}_stills.jpg || true
       - name: Render
-        run: npx remotion render src/projects/$SLUG/entry.tsx $SLUG-FILM out/raw.mp4 --scale=0.75 --concurrency=2 --log=error
+        run: npx remotion render src/projects/$SLUG/entry.tsx $SLUG-FILM out/raw.mp4 --scale=0.75 --concurrency=2 --crf=14 --x264-preset=slow --log=error
       - name: Normalise loudness
         run: ffmpeg -v error -y -i out/raw.mp4 -c:v copy -af "loudnorm=I=-16:TP=-1.5:LRA=11" -c:a aac -b:a 192k -ar 48000 out/$SLUG.mp4
       - name: Loop check (is the last frame the same as the first frame?)
