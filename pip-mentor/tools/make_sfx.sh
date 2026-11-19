@@ -20,4 +20,6 @@ g sfx_burn    "anoisesrc=d=0.7:c=white:a=0.5" "highpass=f=2500,lowpass=f=9000,tr
 g sfx_rimshot "aevalsrc='0.9*sin(2*PI*90*t)*exp(-22*t)+gt(t,0.22)*0.9*sin(2*PI*70*(t-0.22))*exp(-18*(t-0.22))+gt(t,0.46)*0.5*random(0)*exp(-10*(t-0.46))':d=1.0"
 g sfx_faint   "aevalsrc='0.5*sin(2*PI*(700-600*t)*t)*exp(-2.5*t)+gt(t,0.55)*0.9*sin(2*PI*50*(t-0.55))*exp(-12*(t-0.55))':d=1.0"
 g sfx_boing   "aevalsrc='0.6*sin(2*PI*(300+500*sin(2*PI*6*t)*exp(-3*t))*t)*exp(-3.5*t)':d=0.8"
+g sfx_ring    "aevalsrc='0.35*sin(2*PI*(900+160*gt(sin(2*PI*14*t),0))*t)*(0.4+0.6*gt(sin(2*PI*2.2*t),-0.2))':d=0.9"
+g sfx_splash  "anoisesrc=d=0.6:c=white:a=0.6" "lowpass=f=2200,afade=t=in:d=0.02,afade=t=out:st=0.1:d=0.5"
 ls "$O"
