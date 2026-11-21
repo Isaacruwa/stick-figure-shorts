@@ -1,0 +1,13 @@
+# WHO|text|options (pause= rate= pitch=)
+DEVIL|Five hundred to one leverage! Turn ten dollars into five thousand!
+PIPI|Whoa! I'm so high!
+GRANDMA|Baby, that's not leverage. That's a trampoline over a volcano.
+PIPI|What volcano?
+DEVIL|Higher means richer! Crank it to a thousand!
+GRANDMA|If it goes up five hundred times, it comes down five hundred times. Math is a two-way street, and you're driving a trampoline.
+PIPI|...Oh no.|pause=2.6
+GRANDMA|Told you. Come here, baby.
+DEVIL|Liquidation is a lifestyle!
+GRANDMA|Sit down.|pause=0.5
+DEVIL|Ow!|pause=0.8
+PIPI|Leverage doesn't make you rich faster. It makes you broke faster.
