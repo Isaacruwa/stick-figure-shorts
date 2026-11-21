@@ -1,0 +1,12 @@
+# WHO|text|options (pause= rate= pitch=)
+GRANDMA|Pipi, don't open that door. Everyone behind it ignored you when you were broke.
+PIPI|Grandma. I have one hundred dollars.
+GRANDMA|Which is exactly why they're knocking. Watch.|pause=0.25
+GURU|Pipi! I heard you're rich! I'm your mentor now!
+GRANDMA|Mentor? Your tie is rented, your car is rented, and your confidence is on a payment plan. Bye.|pause=0.3
+DEVIL|Buddy! Let's double it!
+GRANDMA|Baby, you couldn't qualify for Earth. Sit.|pause=0.3
+ANGEL|Pipi... I'm proud of you.
+GRANDMA|Finally, someone with manners. Come in, soup's hot.
+PIPI|A hundred dollars, Grandma! We're rich!
+GRANDMA|Baby, in this house, that's a yacht.
