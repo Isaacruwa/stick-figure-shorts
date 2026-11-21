@@ -24,4 +24,5 @@ g sfx_ring    "aevalsrc='0.35*sin(2*PI*(900+160*gt(sin(2*PI*14*t),0))*t)*(0.4+0.
 g sfx_splash  "anoisesrc=d=0.6:c=white:a=0.6" "lowpass=f=2200,afade=t=in:d=0.02,afade=t=out:st=0.1:d=0.5"
 g sfx_whistle "aevalsrc='0.4*sin(2*PI*(1800-1500*t/1.2)*t)':d=1.2" "afade=t=in:d=0.05,afade=t=out:st=1.0:d=0.2"
 g sfx_rip     "anoisesrc=d=0.7:c=white:a=0.7" "highpass=f=1500,tremolo=f=40:d=0.9,afade=t=out:st=0.2:d=0.5"
+g sfx_knock   "aevalsrc='0.9*sin(2*PI*150*t)*exp(-30*t)+gt(t,0.2)*0.9*sin(2*PI*150*(t-0.2))*exp(-30*(t-0.2))+gt(t,0.4)*0.9*sin(2*PI*150*(t-0.4))*exp(-30*(t-0.4))':d=0.7"
 ls "$O"
