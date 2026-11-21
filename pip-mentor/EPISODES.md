@@ -42,5 +42,9 @@ Grandma stays a savage, speed-talking roast queen until she and Pipi are rich to
 ## Posting routine
 Every episode: render (Actions -> Render film), post to YouTube (public Short) and Instagram Reels (pip.mentor), then add a row here. Instagram connection used from ep 4: Composio account instagram_suable-uncase (the older one expired).
 
-## Plan: every 10 episodes -> one long video
-Episodes 1-10 get combined into one long 16:9 video (title cards between episodes, vertical clips placed on a blurred background or re-rendered in 16:9), posted to YouTube. One short per day, one long every 10 days. Nothing to do until episode 10.
+## Plan: every 10 episodes -> one long 16:9 video (owner's spec, 2026-11-21)
+- **No title cards.** One continuous, movie-like film: episodes 1-10 play back to back as scenes of the same story.
+- Nothing announces the episode number except the on-screen "EP N" stamp that each episode already slams in on its last line. No spoken "Episode N" (eps 2-4 say it aloud in their last line: re-render those with the line cut, or trim the audio, for the compilation).
+- Compilation cuts: remove each episode's loop tail (the 14-frame dissolve back to frame 0) and play straight into the next episode with a hard cut or quick flash cut; the loop is only for the standalone Shorts.
+- Format: 16:9 long on YouTube. Decide at ep 10: (a) vertical episodes centred on a blurred copy of themselves (fast), or (b) re-compose each episode natively in 16:9 (best look, a lot of work). Eps 1 and the roast used a narrator; keep or re-voice as the owner prefers.
+- Cadence: one short a day, one long every 10 episodes. Nothing to do until ep 10 is posted.
