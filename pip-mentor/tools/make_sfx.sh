@@ -22,4 +22,6 @@ g sfx_faint   "aevalsrc='0.5*sin(2*PI*(700-600*t)*t)*exp(-2.5*t)+gt(t,0.55)*0.9*
 g sfx_boing   "aevalsrc='0.6*sin(2*PI*(300+500*sin(2*PI*6*t)*exp(-3*t))*t)*exp(-3.5*t)':d=0.8"
 g sfx_ring    "aevalsrc='0.35*sin(2*PI*(900+160*gt(sin(2*PI*14*t),0))*t)*(0.4+0.6*gt(sin(2*PI*2.2*t),-0.2))':d=0.9"
 g sfx_splash  "anoisesrc=d=0.6:c=white:a=0.6" "lowpass=f=2200,afade=t=in:d=0.02,afade=t=out:st=0.1:d=0.5"
+g sfx_whistle "aevalsrc='0.4*sin(2*PI*(1800-1500*t/1.2)*t)':d=1.2" "afade=t=in:d=0.05,afade=t=out:st=1.0:d=0.2"
+g sfx_rip     "anoisesrc=d=0.7:c=white:a=0.7" "highpass=f=1500,tremolo=f=40:d=0.9,afade=t=out:st=0.2:d=0.5"
 ls "$O"
