@@ -319,7 +319,7 @@ const DayOneScene: React.FC<{ g: number }> = ({ g }) => {
   return (
     <g>
       <PoorRoom g={g} warm={1} />
-      {k > 0 && <g transform={`translate(720 700) rotate(-5) scale(${k})`}><text x={0} y={0} textAnchor="middle" fontFamily={CAPTION_FONT} fontWeight={800} fontSize={250} fill="#ffd400" stroke={INK} strokeWidth={16} paintOrder="stroke">DAY 1</text></g>}
+      {k > 0 && <g transform={`translate(720 700) rotate(-5) scale(${k})`}><text x={0} y={0} textAnchor="middle" fontFamily={CAPTION_FONT} fontWeight={800} fontSize={250} fill="#ffd400" stroke={INK} strokeWidth={16} paintOrder="stroke">EP 1</text></g>}
       <Pipi x={560} y={GROUND} s={2.1} facing={1} mood={g < 1276 ? "happy" : "sly"} look={look} blink={blinkAt(g, 5)} armR={20} armL={10} headTilt={g > 1276 ? 5 : 0} />
       {g >= 1240 && <g opacity={ramp(g, 1240, 1252)}><BuyBtn x={1090} y={2060} r={140} k={btn} /></g>}
       <Glint x={640} y={1470} t={ramp(g, 1205, 1235)} r={60} />
