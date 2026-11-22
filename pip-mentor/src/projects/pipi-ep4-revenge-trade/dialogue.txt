@@ -12,4 +12,4 @@ PIPI|No. Closing the chart.|pause=0.4
 DEVIL|Noooo!|pause=0.5
 GRANDMA|Good boy, Pipi. Now where's that little red troublemaker?
 DEVIL|Ow!|pause=1.0
-PIPI|Episode four. Close the chart. Keep your money.
+PIPI|Close the chart. Keep your money.
