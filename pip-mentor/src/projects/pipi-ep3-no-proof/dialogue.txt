@@ -12,4 +12,4 @@ GRANDMA|Pipi. What do we do when someone hides their losses?
 PIPI|We walk away!|pause=0.5
 GRANDMA|Good. Now take off that mustache.
 GURU|Ow!|pause=1.0
-PIPI|Episode three. No proof, no pay.
+PIPI|No proof, no pay.
