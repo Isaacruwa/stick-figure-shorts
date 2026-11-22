@@ -2,18 +2,18 @@
 export const LEAD = 4;
 export const LINES: { who: string; text: string; start: number; end: number }[] = [
   {"who": "GURU", "text": "I made ten thousand dollars before breakfast!", "start": 4, "end": 115},
-  {"who": "PIPI", "text": "Teach me! Please! I have nine dollars!", "start": 121, "end": 278},
-  {"who": "GURU", "text": "Nine? Perfect. That's the price of the secret.", "start": 284, "end": 448},
-  {"who": "PIPI", "text": "Take it! Take it all!", "start": 455, "end": 545},
-  {"who": "GURU", "text": "The secret is simple. Take other people's money.", "start": 552, "end": 688},
-  {"who": "PIPI", "text": "Wait. That's... my money?", "start": 694, "end": 799},
-  {"who": "GURU", "text": "Next lesson costs ninety.", "start": 806, "end": 889},
-  {"who": "GRANDMA", "text": "Give. Him. Back. His nine dollars.", "start": 895, "end": 1029},
-  {"who": "GURU", "text": "Ma'am, I'm a certified wealth mentor.", "start": 1035, "end": 1134},
-  {"who": "GRANDMA", "text": "I'm certified in spoons.", "start": 1141, "end": 1213},
-  {"who": "GURU", "text": "Yes ma'am.", "start": 1228, "end": 1284},
-  {"who": "PIPI", "text": "Grandma! You're the real guru!", "start": 1314, "end": 1417},
-  {"who": "GRANDMA", "text": "Dinner's at six. Wash your hands.", "start": 1423, "end": 1524},
-  {"who": "PIPI", "text": "Episode two. I'm still broke, but I have a grandma.", "start": 1531, "end": 1675},
+  {"who": "PIPI", "text": "Teach me! Please! I have nine dollars!", "start": 121, "end": 266},
+  {"who": "GURU", "text": "Nine? Perfect. That's the price of the secret.", "start": 272, "end": 436},
+  {"who": "PIPI", "text": "Take it! Take it all!", "start": 442, "end": 527},
+  {"who": "GURU", "text": "The secret is simple. Take other people's money.", "start": 533, "end": 669},
+  {"who": "PIPI", "text": "Wait. That's... my money?", "start": 675, "end": 772},
+  {"who": "GURU", "text": "Next lesson costs ninety.", "start": 778, "end": 861},
+  {"who": "GRANDMA", "text": "Give. Him. Back. His nine dollars.", "start": 867, "end": 968},
+  {"who": "GURU", "text": "Ma'am, I'm a certified wealth mentor.", "start": 974, "end": 1073},
+  {"who": "GRANDMA", "text": "I'm certified in spoons.", "start": 1079, "end": 1135},
+  {"who": "GURU", "text": "Yes ma'am.", "start": 1150, "end": 1206},
+  {"who": "PIPI", "text": "Grandma! You're the real guru!", "start": 1236, "end": 1331},
+  {"who": "GRANDMA", "text": "Dinner's at six. Wash your hands.", "start": 1337, "end": 1414},
+  {"who": "PIPI", "text": "I'm still broke, but I have a grandma.", "start": 1420, "end": 1505},
 ];
-export const VOICE_END = 1675;
+export const VOICE_END = 1505;
