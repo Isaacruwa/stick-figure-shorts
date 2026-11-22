@@ -12,4 +12,4 @@ GRANDMA|I'm certified in spoons.|pause=0.5
 GURU|Yes ma'am.|pause=1.0
 PIPI|Grandma! You're the real guru!
 GRANDMA|Dinner's at six. Wash your hands.
-PIPI|Episode two. I'm still broke, but I have a grandma.
+PIPI|I'm still broke, but I have a grandma.
