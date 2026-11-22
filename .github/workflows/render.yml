@@ -74,4 +74,4 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add videos
           git commit -m "Render $SLUG v${GITHUB_RUN_NUMBER}"
-          git push
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; sleep $((RANDOM % 10 + 3)); done
