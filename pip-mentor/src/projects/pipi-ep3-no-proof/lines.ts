@@ -2,18 +2,18 @@
 export const LEAD = 4;
 export const LINES: { who: string; text: string; start: number; end: number }[] = [
   {"who": "GURU", "text": "Hello, young man. I am definitely not the guru.", "start": 4, "end": 154},
-  {"who": "PIPI", "text": "Hi, guru.", "start": 160, "end": 220},
-  {"who": "GURU", "text": "Fine! But my new signals win ninety-eight percent!", "start": 227, "end": 374},
-  {"who": "PIPI", "text": "Show me your last ten trades.", "start": 381, "end": 463},
-  {"who": "GURU", "text": "Ten wins! Look at all that green!", "start": 470, "end": 595},
-  {"who": "PIPI", "text": "Now show me the losses.", "start": 601, "end": 673},
-  {"who": "GURU", "text": "The losses are... in the other group.", "start": 680, "end": 774},
-  {"who": "GRANDMA", "text": "Which other group?", "start": 781, "end": 837},
-  {"who": "GURU", "text": "The VIP group. Only ninety-nine dollars.", "start": 844, "end": 986},
-  {"who": "GRANDMA", "text": "Pipi. What do we do when someone hides their losses?", "start": 993, "end": 1125},
-  {"who": "PIPI", "text": "We walk away!", "start": 1132, "end": 1188},
-  {"who": "GRANDMA", "text": "Good. Now take off that mustache.", "start": 1203, "end": 1302},
-  {"who": "GURU", "text": "Ow!", "start": 1308, "end": 1365},
-  {"who": "PIPI", "text": "Episode three. No proof, no pay.", "start": 1395, "end": 1523},
+  {"who": "PIPI", "text": "Hi, guru.", "start": 160, "end": 216},
+  {"who": "GURU", "text": "Fine! But my new signals win ninety-eight percent!", "start": 222, "end": 370},
+  {"who": "PIPI", "text": "Show me your last ten trades.", "start": 376, "end": 452},
+  {"who": "GURU", "text": "Ten wins! Look at all that green!", "start": 458, "end": 583},
+  {"who": "PIPI", "text": "Now show me the losses.", "start": 589, "end": 656},
+  {"who": "GURU", "text": "The losses are... in the other group.", "start": 662, "end": 756},
+  {"who": "GRANDMA", "text": "Which other group?", "start": 762, "end": 819},
+  {"who": "GURU", "text": "The VIP group. Only ninety-nine dollars.", "start": 825, "end": 967},
+  {"who": "GRANDMA", "text": "Pipi. What do we do when someone hides their losses?", "start": 973, "end": 1074},
+  {"who": "PIPI", "text": "We walk away!", "start": 1080, "end": 1136},
+  {"who": "GRANDMA", "text": "Good. Now take off that mustache.", "start": 1151, "end": 1226},
+  {"who": "GURU", "text": "Ow!", "start": 1232, "end": 1288},
+  {"who": "PIPI", "text": "No proof, no pay.", "start": 1318, "end": 1387},
 ];
-export const VOICE_END = 1523;
+export const VOICE_END = 1387;
