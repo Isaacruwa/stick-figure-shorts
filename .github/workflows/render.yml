@@ -6,6 +6,14 @@ on:
         description: "Film folder name under pip-mentor/src/projects"
         default: "forex-roast-1"
         required: true
+      crf:
+        description: "x264 CRF (lower = better quality, bigger file)"
+        default: "14"
+        required: false
+      frames:
+        description: "Frames for QA stills (space separated)"
+        default: "60 100 180 250 300 400 480 545 620 690 760 860 980 1100 1200"
+        required: false
 permissions:
   contents: write
 jobs:
@@ -14,6 +22,8 @@ jobs:
     timeout-minutes: 60
     env:
       SLUG: ${{ inputs.slug }}
+      CRF: ${{ inputs.crf }}
+      FRAMES: ${{ inputs.frames }}
     defaults:
       run:
         working-directory: pip-mentor
@@ -36,14 +46,19 @@ jobs:
       - name: QA stills
         run: |
           mkdir -p out
-          for fr in 60 100 180 250 300 400 480 545 620 690 760 860 980 1100 1200; do
+          for fr in $FRAMES; do
             npx remotion still src/projects/$SLUG/entry.tsx $SLUG-FILM out/f$fr.png --frame=$fr --scale=0.3 --log=error || true
           done
-          ffmpeg -v error -y -pattern_type glob -i 'out/f*.png' -filter_complex "tile=5x3" -frames:v 1 out/${SLUG}_stills.jpg || true
+          ffmpeg -v error -y -pattern_type glob -i 'out/f*.png' -filter_complex "tile=5x$(( ($(echo $FRAMES | wc -w) + 4) / 5 ))" -frames:v 1 out/${SLUG}_stills.jpg || true
       - name: Render
-        run: npx remotion render src/projects/$SLUG/entry.tsx $SLUG-FILM out/raw.mp4 --scale=0.75 --concurrency=2 --crf=14 --x264-preset=slow --log=error
+        run: npx remotion render src/projects/$SLUG/entry.tsx $SLUG-FILM out/raw.mp4 --scale=0.75 --concurrency=2 --crf=$CRF --x264-preset=slow --log=error
       - name: Normalise loudness
         run: ffmpeg -v error -y -i out/raw.mp4 -c:v copy -af "loudnorm=I=-16:TP=-1.5:LRA=11" -c:a aac -b:a 192k -ar 48000 out/$SLUG.mp4
+      - name: Keep the file under GitHub's 100 MB limit
+        run: |
+          SIZE=$(stat -c%s out/$SLUG.mp4); echo "size: $SIZE"
+          if [ "$SIZE" -gt 92000000 ]; then ffmpeg -v error -y -i out/$SLUG.mp4 -c:v libx264 -preset slow -crf 26 -c:a copy out/small.mp4 && mv out/small.mp4 out/$SLUG.mp4; fi
+          ls -la out/$SLUG.mp4
       - name: Loop check (is the last frame the same as the first frame?)
         continue-on-error: true
         run: |
