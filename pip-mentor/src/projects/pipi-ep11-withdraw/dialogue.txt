@@ -1,0 +1,13 @@
+# WHO|text|options (pause= rate= pitch=)
+GRANDMA|Pipi. A hundred dollars on a screen isn't money. It's a video game score.
+PIPI|But it's growing!
+DEVIL|Never withdraw! Let it ride, buddy!
+GRANDMA|Let it ride? Baby, you can't buy soup with a number.
+DEVIL|Real traders reinvest everything!
+GRANDMA|Real traders eat. You've been living on soup and hope.|pause=0.3
+PIPI|Okay. I'm withdrawing twenty dollars.
+DEVIL|Twenty?! My commission!|pause=0.7
+PIPI|Grandma. I bought you a yacht.
+GRANDMA|Baby, it has a duck on it.
+PIPI|In this house, that's a yacht.
+GRANDMA|Fine. But I'm the captain.
