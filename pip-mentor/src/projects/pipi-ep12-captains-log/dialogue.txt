@@ -1,0 +1,14 @@
+# WHO|text|options (pause= rate= pitch=)
+GRANDMA|Captain's log. Pipi lost eight dollars and called it bad luck.
+PIPI|The market was against me!
+GRANDMA|Entry one: Felt lucky. That's not analysis. That's a horoscope.|pause=0.6
+DEVIL|Trust your gut, buddy!
+GRANDMA|His gut buys coins with dogs on them. Entry two: Deleted my stop loss.|pause=0.5
+PIPI|I wrote all that?
+GRANDMA|In pen. Entry three: The devil said buy.
+DEVIL|That's slander! Is it slander if it's signed?|pause=0.3
+GRANDMA|With a little horn on the D.|pause=0.7
+PIPI|So it wasn't the market.
+GRANDMA|It was a group project, baby.|pause=0.6
+PIPI|Okay. Writing everything down.
+GRANDMA|Good. Page one: Grandma was right.
