@@ -1,0 +1,14 @@
+# WHO|text|options (pause= rate= pitch=)
+GRANDMA|Pipi. Why does that dog have a minus sign on it?
+PIPI|That's Gerald. He's down, but I'm a long-term investor now.|pause=0.3
+GRANDMA|Long-term? You got him Monday! He has a toothbrush in my bathroom.|pause=0.6
+DEVIL|Don't quit on Gerald! Average down!
+PIPI|Hmm. Okay.
+GRANDMA|Now you don't have a trade. You have a zoo.|pause=0.5
+DEVIL|One more scoop! Giddy up!
+PIPI|He's consolidating.|pause=0.3
+GRANDMA|Baby, he's the size of a bus, he ate my couch, and he's still down.|pause=0.8
+PIPI|Goodbye, Gerald.|pause=0.3
+DEVIL|I RESIGNED!|pause=0.3
+GRANDMA|Gerald cost two dollars. His snacks cost eight.|pause=0.6
+PIPI|He was a good boy.
