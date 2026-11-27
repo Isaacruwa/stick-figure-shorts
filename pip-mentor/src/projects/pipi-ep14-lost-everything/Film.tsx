@@ -38,7 +38,7 @@ const Portrait: React.FC<{ g: number; x: number; i: number }> = ({ g, x, i }) =>
   const u = ramp(g, T_PORT + i * 7, T_PORT + i * 7 + 12), w = Math.abs(Math.cos(Math.PI * u)), back = u > 0.5;
   const cols = ["#2d3a5a", "#6b2d3a", "#3a5a2d"];
   return (
-    <g transform={`translate(${x} 820) scale(${Math.max(0.02, w)} 1)`}>
+    <g transform={`translate(${x} 1150) scale(${Math.max(0.02, w)} 1)`}>
       <rect x={-75} y={-95} width={150} height={190} rx={8} fill={back ? "#7a5a3a" : "#d9a441"} stroke={INK} strokeWidth={6} />
       {back ? (
         <g><path d="M -60,-80 L 60,80 M 60,-80 L -60,80" stroke="#5a3f26" strokeWidth={6} /><rect x={-62} y={-82} width={124} height={164} fill="none" stroke="#5a3f26" strokeWidth={5} /></g>
