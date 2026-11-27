@@ -1,0 +1,18 @@
+# WHO|text|options (pause= rate= pitch=)
+GRANDMA|Pipi! Why are you sitting like a widow? Who died?|rate=+32%
+PIPI|Grandma... I lost my money.|rate=+24%
+GRANDMA|Again?! Even your money is tired of living with you!|pause=0.35|rate=+32%
+DEVIL|Relax, Pipi. You just need to deposit more money. Double the lot size. This time you'll recover everything!|rate=+22%
+ANGEL|Don't listen to him! You need to understand why you lost before risking another coin.|rate=+24%
+PIPI|But Devil, you said the last trade was guaranteed!|rate=+24%
+GRANDMA|Guaranteed?! Even your grandfather's marriage wasn't guaranteed, and they stayed together for 50 years!|rate=+32%
+DEVIL|Woman, stay out of this!|rate=+22%
+GRANDMA|Shut up! You were so stupid you couldn't even manage to stay in heaven!|pause=0.9|rate=+32%
+GURU|Pipi, how much did you lose?|rate=+16%
+PIPI|Everything I made from that $100 profit in Episode 10.|rate=+24%
+GURU|So you risked your profits trying to become rich overnight?|rate=+16%
+GRANDMA|Overnight?! This boy wants to become a millionaire before his underwear dries!|rate=+32%
+DEVIL|Pipi, ignore them. One more deposit!|rate=+22%
+ANGEL|Pipi, please. Learn risk management.|rate=+24%
+PIPI|Grandma... can I borrow some money?|rate=+24%
+GRANDMA|Borrow?! Even your ancestors are considering changing their surname!|rate=+32%
